@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+    <title>App</title>
+</head>
+<body>
+
+    <div >
+        <div >
+            <div >
+                <div >
+                    <div>
+                        <label for="">Positive Sentiments : {{ data.positive }}</label>
+                    </div>
+                    <div>
+                        <label for="">Negative Sentiments : {{ data.negative }}</label>
+                    </div>
+                    <div>
+                        <form method="post">
+                          <textarea name="text"></textarea>
+                          <input type="submit">
+                        </form>
+                    </div>
+
+                    <div >
+                        {% for review in data.reviews %}
+                        <hr/>
+                          <div>
+                              <div >
+                                  </div>
+                                  <div ><span>{{ review }}</span></div>
+                                  <hr/>
+                        {% endfor %}
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
